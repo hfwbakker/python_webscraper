@@ -29,7 +29,9 @@ Basic functionality achieved! Can now call any axios page link with argv (defaul
 --- Tuesday February 9th ---
 Added .gitignore, created virtual environment, prettified axios scraper print-out a bit.
 
-Can now enter a argument to filter for from command line.  Articles that don't contain this term will only print "skipping article". Also added a function that prints the text from the "go deeper" link. Perhaps good to add a choice where you see the abstract first and then the question "print article y/n" or something? -> done and done. Maybe refine choice question a bit but works otherwise.
+Early evening sesh: Can now enter a argument to filter for from command line.  Articles that don't contain this term will only print "skipping article". Also added a function that prints the text from the "go deeper" link. Perhaps good to add a choice where you see the abstract first and then the question "print article y/n" or something? -> done and done. Maybe refine choice question a bit but works otherwise.
+
+Evening session pt 2: Relevant abstracts are displayed first, user can select y/n to print article or skip to next. At the end of page user can select y/n to start scraping the next page. Next page function does not yet work well because the next page link is not the same on every site. Need to write some logic that selects whatever link exists on that page. However, problem with creating a seperate function is scope -> "search_for" value gets lost upon going to next page. Need to see how to fix that.
 
 
 Next up:
