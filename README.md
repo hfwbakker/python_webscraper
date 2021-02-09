@@ -29,11 +29,9 @@ Basic functionality achieved! Can now call any axios page link with argv (defaul
 --- Tuesday February 9th ---
 Added .gitignore, created virtual environment, prettified axios scraper print-out a bit.
 
-Next up:
-- Print articles of a certain category
-- Print articles from older pages as well. There is a link at the bottom of the page called "older articles" or something that loads previous day articles and so on. Figure out a way to specify how many times you want to go back and print it. Perhaps by making another script that calls this scraper on each page?
-- Get the contents from the URL ("go deeper") for each article as well.
-- Some pretty printing perhaps?
+Can now enter a argument to filter for from command line.  Articles that don't contain this term will only print "skipping article". Also added a function that prints the text from the "go deeper" link. Perhaps good to add a choice where you see the abstract first and then the question "print article y/n" or something? -> done and done. Maybe refine choice question a bit but works otherwise.
 
-POA:
-- make a function that retrieves text from axios article URL and call that on each URL in the for loop.
+
+Next up:
+- Print articles from older pages as well. There is a link at the bottom of the page called "older articles" or something that loads previous day articles and so on. Figure out a way to specify how many times you want to go back and print it. Perhaps by making another script that calls this scraper on each page?
+- Some pretty printing perhaps?
