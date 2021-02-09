@@ -4,10 +4,10 @@ import requests
 
 if len(sys.argv) == 1:
     target = 'https://www.axios.com/world'
-    print(f"Target site: {target}")
+    print(f"\nTarget site: {target}\n\n")
 else:
     target = str(sys.argv[1])
-    print(f"Target site: {target}")
+    print(f"\nTarget site: {target}\n\n")
 
 # html_text = requests.get('https://www.axios.com/world').text
 html_text = requests.get(target).text

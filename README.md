@@ -6,6 +6,9 @@ https://www.youtube.com/watch?v=XVv6mJpFOb0&feature=youtu.be&ab_channel=freeCode
 
 at 39:00 min.
 
+Virtualenv:
+source webscraper_env/bin/activate
+
 axios_scraper.py project:
 
 
@@ -23,8 +26,14 @@ Started working on a Axios webscraper. The plan and results so far:
 --- Monday February 8th ---
 Basic functionality achieved! Can now call any axios page link with argv (default is set to 'axios/world'), and it will print all articles titles, text, and URL to full article.
 
+--- Tuesday February 9th ---
+Added .gitignore, created virtual environment, prettified axios scraper print-out a bit.
+
 Next up:
 - Print articles of a certain category
 - Print articles from older pages as well. There is a link at the bottom of the page called "older articles" or something that loads previous day articles and so on. Figure out a way to specify how many times you want to go back and print it. Perhaps by making another script that calls this scraper on each page?
 - Get the contents from the URL ("go deeper") for each article as well.
 - Some pretty printing perhaps?
+
+POA:
+- make a function that retrieves text from axios article URL and call that on each URL in the for loop.
