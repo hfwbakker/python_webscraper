@@ -48,8 +48,11 @@ def scrape_it(search_for=' ', target='https://www.axios.com/world'):
             count += 1
 
     #### go to next page logic block ####
+
     try:
         next_page = soup.find('a', class_="sc-31t5q3-10 kHAPjX sc-19f8cds-0 gXiJMM gtm-content-click").get('href')
+    except AttributeError:
+        next_page = soup.find('a', class_="gtm-content-link no-underline hover:text-accent-blue-shade hover:underline flex items-center space-x-4 text-soft-black-core").get('href')
     except:
         print("No link for next page found.")
         print("See you next time!")
