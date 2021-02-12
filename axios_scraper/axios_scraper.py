@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import pprint
 
 target = ' '
 search_for = ' '
@@ -15,7 +16,7 @@ def get_article(x):
     user_choice = input("print article? y/n\n> ")
     if user_choice == "y":
         print("printing text content of link\n")
-        print(text_content)
+        pprint.pprint(text_content)
     else:
         print("you elected not to print.")
 

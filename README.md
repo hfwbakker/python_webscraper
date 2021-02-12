@@ -36,8 +36,12 @@ Evening session pt 2: Relevant abstracts are displayed first, user can select y/
 --- Friday February 12th ---
 Now correctly keeps going to next page upon request. Next up improving readability of printing.
 
+Added pprint for article printing. Not a great solution but enough for now.
+
+Installed Flask for the virtualenv to see if I can use it to make a GUI. Idea is to have some menu where i can select which website to scrape and I will just start adding customized scraping scripts for each. Axios scraper is 99% there now. Next up is a Flask deep dive.
+
 
 Next up:
 - Some pretty printing perhaps?
 - Same thing for other websites...
-- GUI?
+- GUI? -> use Flask? https://www.youtube.com/watch?v=Z1RJmh_OqeA&ab_channel=freeCodeCamp.org 
