@@ -33,7 +33,11 @@ Early evening sesh: Can now enter a argument to filter for from command line.  A
 
 Evening session pt 2: Relevant abstracts are displayed first, user can select y/n to print article or skip to next. At the end of page user can select y/n to start scraping the next page. Next page function does not yet work well because the next page link is not the same on every site. Need to write some logic that selects whatever link exists on that page. However, problem with creating a seperate function is scope -> "search_for" value gets lost upon going to next page. Need to see how to fix that.
 
+--- Friday February 12th ---
+Now correctly keeps going to next page upon request. Next up improving readability of printing.
+
 
 Next up:
-- Print articles from older pages as well. There is a link at the bottom of the page called "older articles" or something that loads previous day articles and so on. Figure out a way to specify how many times you want to go back and print it. Perhaps by making another script that calls this scraper on each page?
 - Some pretty printing perhaps?
+- Same thing for other websites...
+- GUI?
