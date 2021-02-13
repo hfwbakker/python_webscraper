@@ -40,8 +40,19 @@ Added pprint for article printing. Not a great solution but enough for now.
 
 Installed Flask for the virtualenv to see if I can use it to make a GUI. Idea is to have some menu where i can select which website to scrape and I will just start adding customized scraping scripts for each. Axios scraper is 99% there now. Next up is a Flask deep dive.
 
+--- Saturday February 13th ---
+Built a basic Flask app. The plan:
+    - use import to import axios_scraper.py functions
+    - create a seperate /axios page
+    - call the customized script there and display text to browser and get input through keys
+    - rinse and repeat for other files as well 
+
+This approach stil just outputs to terminal instead of browser. Not sure how to fix yet.
+
+Someone told me the following: Flask is a reasonable tool, and I should look into "jsonify" (jsonify the program output) and "jinja2", claiming that any decent Flask tutorial should cover this. Flask + json deepdive continues...
+
 
 Next up:
-- Some pretty printing perhaps?
 - Same thing for other websites...
 - GUI? -> use Flask? https://www.youtube.com/watch?v=Z1RJmh_OqeA&ab_channel=freeCodeCamp.org 
+- Corey Schafer Flask tutorial https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH

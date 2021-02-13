@@ -1,0 +1,9 @@
+body {
+    margin: 0; 
+    background-color: lightgreen;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+}
