@@ -1,16 +1,6 @@
 # python_webscraper
 
-progress exercise:
-
-https://www.youtube.com/watch?v=XVv6mJpFOb0&feature=youtu.be&ab_channel=freeCodeCamp.org
-
-at 39:00 min.
-
-Virtualenv:
-source webscraper_env/bin/activate
-
 axios_scraper.py project:
-
 
 LOG:
 --- Sunday February 7th ---
@@ -51,8 +41,13 @@ This approach stil just outputs to terminal instead of browser. Not sure how to 
 
 Someone told me the following: Flask is a reasonable tool, and I should look into "jsonify" (jsonify the program output) and "jinja2", claiming that any decent Flask tutorial should cover this. Flask + json deepdive continues...
 
+Also: add scrapers for F&B trend watch websites (smartshanghai? CNN travel perhaps?)
+
+--- Sunday February 14th ---
+Removed a lot of useless files. Did some more research on Flask and think I finally found a good source: https://realpython.com/python-web-applications/ tomorrow should try to build a basic app with this. 
+
 
 Next up:
-- Same thing for other websites...
-- GUI? -> use Flask? https://www.youtube.com/watch?v=Z1RJmh_OqeA&ab_channel=freeCodeCamp.org 
-- Corey Schafer Flask tutorial https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
+- Use https://realpython.com/python-web-applications/ to make a test web-app (webscraper_app folder) that I can later refactor into a proper scraper app. No need to try and deploy to google cloud yet as this tutorial is aimed at.
+- Add scrapers for F&B trend watch websites (smartshanghai? CNN travel perhaps?)
+- Research flask more
