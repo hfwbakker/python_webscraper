@@ -46,8 +46,14 @@ Also: add scrapers for F&B trend watch websites (smartshanghai? CNN travel perha
 --- Sunday February 14th ---
 Removed a lot of useless files. Did some more research on Flask and think I finally found a good source: https://realpython.com/python-web-applications/ tomorrow should try to build a basic app with this. 
 
+--- Wednesday February 17th ---
+Fixed a bug where the div with the main text was addressed with the wrong class in the get_article() function, causing a NoneType error. Fixed it for now by adding this other class identifier. Not sure if this means there are many of they change over time. Should look in to if this is a thing for automatically generated websites? Possibly an effect of using "React" + "CSS modules".
+
+Did the realpython tutorial. More studying of Flask needed. Perhaps should look into GUI option mentioned in same article
+
+Added politico scraper, works pretty much the same as the Axios one.
 
 Next up:
-- Use https://realpython.com/python-web-applications/ to make a test web-app (webscraper_app folder) that I can later refactor into a proper scraper app. No need to try and deploy to google cloud yet as this tutorial is aimed at.
 - Add scrapers for F&B trend watch websites (smartshanghai? CNN travel perhaps?)
 - Research flask more
+- Research React + CSS Modules

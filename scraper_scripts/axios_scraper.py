@@ -2,16 +2,16 @@ from bs4 import BeautifulSoup
 import requests
 import pprint
 
-# target = ' '
-# search_for = ' '
-
 ########################################
 ###### get text from URL function ######
 ########################################
 def get_article(x):
     html_text = requests.get(x).text
     soup = BeautifulSoup(html_text, 'lxml')
-    text_content = soup.find('div', class_ = "b0w77w-0 gyJiUn mt-12 mb-20 sm:mt-20 gtm-story-text p").text
+    try:
+        text_content = soup.find('div', class_ = "b0w77w-0 gyJiUn mt-12 mb-20 sm:mt-20 gtm-story-text p").text
+    except:
+         text_content = soup.find('div', class_ = "b0w77w-0 dZXorX mt-12 mb-20 sm:mt-20 gtm-story-text p").text
 
     user_choice = input("print article? y/n\n> ")
     if user_choice == "y":
