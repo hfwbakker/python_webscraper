@@ -2,6 +2,9 @@
 
 axios_scraper.py project:
 
+KNOWN BUGS:
+- politico_scraper not working on Mac, error seems related to urllib.
+
 LOG:
 --- Sunday February 7th ---
 Started working on a Axios webscraper. The plan and results so far:
@@ -57,3 +60,4 @@ Next up:
 - Add scrapers for F&B trend watch websites (smartshanghai? CNN travel perhaps?)
 - Research flask more
 - Research React + CSS Modules
+- See if you can put the results into an excel sheet? Check "openpyxl" module
