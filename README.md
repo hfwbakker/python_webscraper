@@ -3,7 +3,6 @@
 axios_scraper.py project:
 
 KNOWN BUGS:
-- politico_scraper not working on Mac, error seems related to urllib.
 
 LOG:
 --- Sunday February 7th ---
@@ -56,8 +55,16 @@ Did the realpython tutorial. More studying of Flask needed. Perhaps should look 
 
 Added politico scraper, works pretty much the same as the Axios one.
 
+--- Saturday February 20th ---
+Fixed a bug where politico scraper threw an error on mac (something related to urllib). Solution: run "Install Certificates" command in Mac applications Python 3.9 folder.
+
+--- Monday February 22nd ---
+Did some tinkering with openpyxl. Refer to excel_python folder in python for loop code that can put all scraper output into an excel sheet. Suggest I make a "excel_it()" function that can be called on request when finishing scraping a page that allows to e.g. put titles + urls + dates in an excel sheet. Probably should include a test that notifies user if an excel sheet by that name already exists and will possible be overridden.
+
+Next question would be if openpyxl can be used to read form an excel sheet.
+
 Next up:
 - Add scrapers for F&B trend watch websites (smartshanghai? CNN travel perhaps?)
 - Research flask more
 - Research React + CSS Modules
-- See if you can put the results into an excel sheet? Check "openpyxl" module
+- See if you can put the results into an excel sheet? Check "openpyxl" module 
