@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pprint
+import openpyxl
 
 ########################################
 ###### get text from URL function ######
@@ -29,6 +30,8 @@ def scrape_it(search_for=' ', target='https://www.axios.com/world'):
     soup = BeautifulSoup(html_text, 'lxml')
     articles = soup.find_all('div', class_ = "sc-1jy24uc-0 ehZYCh full gtm-content-click pt-20 up-to-sm:pt-12")
     count = 1
+    article_name_list = []
+    url_list = []
 
     for article in articles:
         header = article.find('a', class_ = 'title-link gtm-content-click')
@@ -43,6 +46,8 @@ def scrape_it(search_for=' ', target='https://www.axios.com/world'):
             get_article(url)
             print("-"*20 + "\n")
             count += 1
+            article_name_list.append(title)
+            url_list.append(url)
         else:
             print(f"Skipping article {count}: {title[0:30]}...\n")
             print("-"*20 + "\n")
@@ -58,11 +63,16 @@ def scrape_it(search_for=' ', target='https://www.axios.com/world'):
         print("No link for next page found.")
         print("See you next time!")
         exit(0)
+    print("End of page.")
+    excel_choice = input("Save output to excel sheet? (y/n)\n>")
+    if excel_choice == "y":
+        excel_it(article_name_list, url_list)
+    else: print("You chose not to print.")
     choice = input("Scrape next page? (y/n)\n> ")
     if choice == "y":
         scrape_it(search_for, next_page)
     else:
-        print("see you next time!")
+        print("See you next time!")
         exit(0)
     ########################################
 
@@ -77,6 +87,30 @@ def user_selection():
         scrape_it(search_for_selection)
     else:
         scrape_it(choice, search_for_selection)
+
+##################################
+#### put it in an excel sheet ####
+##################################
+def excel_it(column1, column2):
+    print("Saving matches to 'output.xlsx")
+    # make file
+    wb = openpyxl.Workbook()
+    # make/name sheet
+    ws = wb.active
+    ws.title = "Axios scraper output"
+    # name columns
+    ws['A1'] = "Article name"
+    ws['B1'] = "Link"
+    # loop over articles and add title + url to list
+    row_count = 2
+    for x, y  in zip(column1, column2):
+        ws[f'A{row_count}'] = x
+        ws[f'B{row_count}'] = y
+        row_count += 1
+
+    # save file
+    wb.save("output.xlsx")
+
 
 
 ###############################

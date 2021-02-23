@@ -2,6 +2,13 @@
 
 axios_scraper.py project:
 
+NEXT UP:
+- Adjust column width of output.xlsx so it becomes more readable
+- Somehow check if output.xlsx or the worksheet already exists so a new one can be created to prevent overwriting (openpyxl allows you to read excel files as well)
+- Add scrapers for F&B trend watch websites (smartshanghai? CNN travel perhaps?)
+- Add a GUI linking all scraper scripts, possibly using flask or PySimpgleGUI (check https://www.youtube.com/watch?v=NZMTWBpLUa4)
+
+
 KNOWN BUGS:
 
 LOG:
@@ -63,8 +70,5 @@ Did some tinkering with openpyxl. Refer to excel_python folder in python for loo
 
 Next question would be if openpyxl can be used to read form an excel sheet.
 
-Next up:
-- Add scrapers for F&B trend watch websites (smartshanghai? CNN travel perhaps?)
-- Research flask more
-- Research React + CSS Modules
-- See if you can put the results into an excel sheet? Check "openpyxl" module 
+--- Tuesday February 23rd ---
+Included openpyxl in axios_scraper.py. Article name + url are now saved to an excel file named output.xlsx when chosing so on prompt. Now need to refine output sheet and prevent accidental overwrites when scraping more than one page.
