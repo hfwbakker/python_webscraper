@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
-import requests
-import pprint
-import openpyxl
+import requests, pprint, openpyxl, os.path
+# import pprint
+# import openpyxl
+# import os.path
 
 ########################################
 ###### get text from URL function ######
@@ -92,7 +93,6 @@ def user_selection():
 #### put it in an excel sheet ####
 ##################################
 def excel_it(column1, column2):
-    print("Saving matches to 'output.xlsx")
     # make file
     wb = openpyxl.Workbook()
     # make/name sheet
@@ -100,7 +100,9 @@ def excel_it(column1, column2):
     ws.title = "Axios scraper output"
     # name columns
     ws['A1'] = "Article name"
+    ws.column_dimensions["A"].width = 75
     ws['B1'] = "Link"
+    ws.column_dimensions["B"].width = 80
     # loop over articles and add title + url to list
     row_count = 2
     for x, y  in zip(column1, column2):
@@ -108,8 +110,12 @@ def excel_it(column1, column2):
         ws[f'B{row_count}'] = y
         row_count += 1
 
-    # save file
-    wb.save("output.xlsx")
+    # save file, create new one if old one exists
+    filecount = 0
+    while os.path.isfile(f"output{filecount}.xlsx") == True:
+        filecount += 1
+    wb.save(f"output{filecount}.xlsx")
+    print(f"Saved to 'output{filecount}.xlsx")
 
 
 
